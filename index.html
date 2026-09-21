@@ -19,21 +19,10 @@
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--cream);
-      font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
-      line-height: 1.6;
-      word-break: keep-all;
-    }
+    body { margin: 0; color: var(--ink); background: var(--cream); font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif; line-height: 1.6; word-break: keep-all; }
     a { color: inherit; text-decoration: none; }
     .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
-    header {
-      position: sticky; top: 0; z-index: 10;
-      background: rgba(247, 244, 237, .9); backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--line);
-    }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(247, 244, 237, .9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
     .nav { height: 76px; display: flex; align-items: center; justify-content: space-between; }
     .logo { font-weight: 900; letter-spacing: -.06em; font-size: 1.15rem; }
     .logo span { color: var(--orange); }
@@ -78,7 +67,8 @@
     .award-badge small { display: block; color: var(--muted); font-size: .75rem; transform: rotate(-5deg); }
     .contact { padding-bottom: 110px; }
     .contact-box { padding: clamp(28px, 6vw, 64px); border-radius: 24px; background: var(--orange); color: white; display: flex; justify-content: space-between; align-items: end; gap: 30px; }
-    .contact-box h2 { max-width: 550px; }
+    .contact-box h2 { max-width: 100%; font-size: clamp(1.15rem, 3.7vw, 3.3rem); }
+    .contact-box h2 span { display: block; white-space: nowrap; }
     .contact-box p { margin: 17px 0 0; color: rgba(255,255,255,.78); }
     .contact-links { display: flex; flex-direction: column; align-items: flex-end; gap: 9px; white-space: nowrap; font-weight: 750; }
     .contact-links a { border-bottom: 1px solid rgba(255,255,255,.55); }
@@ -100,6 +90,8 @@
       .card h3 { margin-top: 28px; }
       .award { padding: 27px; }
       .award-badge { justify-self: start; text-align: left; }
+      .contact-box { gap: 24px; }
+      .contact-box h2 { font-size: clamp(1rem, 5vw, 1.5rem); }
       .contact-links { align-items: flex-start; white-space: normal; }
       footer { display: block; }
       footer span { display: block; margin-top: 5px; }
@@ -107,79 +99,14 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap nav">
-      <a class="logo" href="#top">JUNGYOON<span>.</span></a>
-      <nav aria-label="주요 메뉴">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
+  <header><div class="wrap nav"><a class="logo" href="#top">JUNGYOON<span>.</span></a><nav aria-label="주요 메뉴"><a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a></nav></div></header>
   <main id="top">
-    <section class="hero">
-      <div class="wrap">
-        <div class="eyebrow">F&B Marketing & Planning</div>
-        <h1>좋아하는 것을<br /><em>경험</em>으로 만듭니다.</h1>
-        <p class="hero-copy">사람과 브랜드 사이의 접점을 관찰하고, 매력적인 콘텐츠와 기획으로 일상 속 즐거운 경험을 설계하는 곽정윤입니다.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#work">프로젝트 보기</a>
-          <a class="button secondary" href="#contact">연락하기</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="wrap">
-        <div class="section-head"><h2>About me</h2><p class="section-note">저를 소개합니다.</p></div>
-        <div class="about-grid">
-          <p class="about-lead">소비자의 일상에 자연스럽게 스며드는<br /><strong>설득력 있는 스토리를 만듭니다.</strong></p>
-          <dl class="info">
-            <div><dt>NAME</dt><dd>곽정윤</dd></div>
-            <div><dt>MAJOR</dt><dd>몽골어과</dd></div>
-            <div><dt>STUDENT ID</dt><dd>202301409</dd></div>
-            <div><dt>MBTI</dt><dd><span class="tag">INTP</span></dd></div>
-            <div><dt>INTEREST</dt><dd>F&B 산업 마케팅 및 기획</dd></div>
-            <div><dt>INSTAGRAM</dt><dd>@LWJY0303</dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <section class="projects" id="work">
-      <div class="wrap">
-        <div class="section-head"><h2>Selected work</h2><p class="section-note">기획부터 실행까지, 직접 경험한 프로젝트</p></div>
-        <div class="project-grid">
-          <article class="card"><div class="card-number">01 / CONTENT</div><h3>예술가를 위한 감정기록장 ‘아마로그’</h3><p>예술가의 감정을 기록하고 공유할 수 있는 감정기록장 제작 프로젝트</p></article>
-          <article class="card"><div class="card-number">02 / EVENT</div><h3>예술가 소모임 & 연말파티</h3><p>관계와 교류를 만드는 소모임 및 연말 행사 기획·운영</p></article>
-          <article class="card"><div class="card-number">03 / MARKETING</div><h3>SNS 콘텐츠 마케팅 실습</h3><p>채널에 맞는 콘텐츠를 기획하고 제작하며 브랜드 메시지 전달</p></article>
-          <article class="card"><div class="card-number">04 / PROGRAM</div><h3>고등학생 캠퍼스 투어 프로그램</h3><p>참여자의 시선에서 동선을 설계한 캠퍼스 경험 프로그램 기획</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="section-head"><h2>Achievement</h2><p class="section-note">아이디어를 한 문장에 담아낸 결과</p></div>
-        <div class="award">
-          <div><h3>비스트로 피자 기업 슬로건 공모전</h3><p>대상 수상 · 브랜드의 매력을 효과적으로 전달하는 슬로건 제안</p></div>
-          <div class="award-badge">GRAND PRIZE<small>AWARD</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="wrap">
-        <div class="contact-box">
-          <div><h2>테이블 위에 오를 다음 이야기,<br />저와 함께 시작해 볼까요?</h2><p>새로운 프로젝트와 협업 이야기를 기다립니다.</p></div>
-          <div class="contact-links"><a href="tel:010-0000-0000">010-0000-0000</a><a href="https://instagram.com/LWJY0303" target="_blank" rel="noreferrer">Instagram @LWJY0303 ↗</a></div>
-        </div>
-      </div>
-    </section>
+    <section class="hero"><div class="wrap"><div class="eyebrow">F&B Marketing & Planning</div><h1>좋아하는 것을<br /><em>경험</em>으로 만듭니다.</h1><p class="hero-copy">사람과 브랜드 사이의 접점을 관찰하고, 매력적인 콘텐츠와 기획으로 일상 속 즐거운 경험을 설계하는 곽정윤입니다.</p><div class="hero-actions"><a class="button primary" href="#work">프로젝트 보기</a><a class="button secondary" href="#contact">연락하기</a></div></div></section>
+    <section id="about"><div class="wrap"><div class="section-head"><h2>About me</h2><p class="section-note">저를 소개합니다.</p></div><div class="about-grid"><p class="about-lead">소비자의 일상에 자연스럽게 스며드는<br /><strong>설득력 있는 스토리를 만듭니다.</strong></p><dl class="info"><div><dt>NAME</dt><dd>곽정윤</dd></div><div><dt>MAJOR</dt><dd>몽골어과</dd></div><div><dt>STUDENT ID</dt><dd>202301409</dd></div><div><dt>MBTI</dt><dd><span class="tag">INTP</span></dd></div><div><dt>INTEREST</dt><dd>F&B 산업 마케팅 및 기획</dd></div><div><dt>INSTAGRAM</dt><dd>@LWJY0303</dd></div></dl></div></div></section>
+    <section class="projects" id="work"><div class="wrap"><div class="section-head"><h2>Selected work</h2><p class="section-note">기획부터 실행까지, 직접 경험한 프로젝트</p></div><div class="project-grid"><article class="card"><div class="card-number">01 / CONTENT</div><h3>예술가를 위한 감정기록장 ‘아마로그’</h3><p>예술가의 감정을 기록하고 공유할 수 있는 감정기록장 제작 프로젝트</p></article><article class="card"><div class="card-number">02 / EVENT</div><h3>예술가 소모임 & 연말파티</h3><p>관계와 교류를 만드는 소모임 및 연말 행사 기획·운영</p></article><article class="card"><div class="card-number">03 / MARKETING</div><h3>SNS 콘텐츠 마케팅 실습</h3><p>채널에 맞는 콘텐츠를 기획하고 제작하며 브랜드 메시지 전달</p></article><article class="card"><div class="card-number">04 / PROGRAM</div><h3>고등학생 캠퍼스 투어 프로그램</h3><p>참여자의 시선에서 동선을 설계한 캠퍼스 경험 프로그램 기획</p></article></div></div></section>
+    <section><div class="wrap"><div class="section-head"><h2>Achievement</h2><p class="section-note">아이디어를 한 문장에 담아낸 결과</p></div><div class="award"><div><h3>비스트로 피자 기업 슬로건 공모전</h3><p>대상 수상 · 브랜드의 매력을 효과적으로 전달하는 슬로건 제안</p></div><div class="award-badge">GRAND PRIZE<small>AWARD</small></div></div></div></section>
+    <section class="contact" id="contact"><div class="wrap"><div class="contact-box"><div><h2><span>테이블 위에 오를 다음 이야기,</span><span>저와 함께 시작해 볼까요?</span></h2><p>새로운 프로젝트와 협업 이야기를 기다립니다.</p></div><div class="contact-links"><a href="tel:010-0000-0000">010-0000-0000</a><a href="https://instagram.com/LWJY0303" target="_blank" rel="noreferrer">Instagram @LWJY0303 ↗</a></div></div></div></section>
   </main>
-
   <footer class="wrap"><strong>곽정윤</strong><span>F&B Marketing & Planning Portfolio · 2026</span></footer>
 </body>
 </html>
